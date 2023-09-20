@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Java Setup Instructions</title>
+</head>
+<body>
+
+<button id="showInstructionsButton">Show Java Setup Instructions</button>
+
+<script>
+document.getElementById("showInstructionsButton").addEventListener("click", function() {
+    var instructions = "To set up Java:\n\n" +
+        "1. Visit the official Java download page at https://www.java.com.\n" +
+        "2. Click on the 'Free Java Download' button.\n" +
+        "3. Follow the on-screen instructions to download and install Java on your computer.\n" +
+        "4. Once installed, you can verify your Java installation by opening a terminal/command prompt and running 'java -version'.\n\n" +
+        "Note: These are general instructions. The exact steps may vary depending on your operating system.";
+
+    alert(instructions);
+});
+</script>
+
+</body>
+</html>
