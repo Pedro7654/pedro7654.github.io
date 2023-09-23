@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Blockly Example</title>
+    <!-- Include Blockly library -->
+    <script src="https://unpkg.com/blockly@latest/blockly_compressed.js"></script>
+    <script src="https://unpkg.com/blockly@latest/blocks_compressed.js"></script>
+    <script src="https://unpkg.com/blockly@latest/javascript_compressed.js"></script>
+</head>
+<body>
+    <div id="blocklyDiv" style="height: 480px; width: 600px;"></div>
+    <script>
+        // Create a Blockly workspace
+        var workspace = Blockly.inject('blocklyDiv', {
+            toolbox: document.getElementById('toolbox')
+        });
+    </script>
+</body>
