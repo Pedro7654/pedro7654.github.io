@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <h1>Pedro's LaTeX Math Render With KaTeX</h1>
+    <title>Pedro's Math Render With KaTeX</title>
+<head>
+    <!-- Include KaTeX CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
+
+    <!-- Include KaTeX JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
+
+    <!-- Include KaTeX auto-render extension -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/contrib/auto-render.min.js"></script>
+</head>
+<body>
+
+<!-- User input field -->
+<input type="text" id="latexInput" placeholder="Enter LaTeX equation">
+<button onclick="renderUserInput()">Render</button>
+
+<!-- Rendered output -->
+<div id="output"></div>
+
+<script>
+    function renderUserInput() {
+        // Get the user's LaTeX input
+        const userInput = document.getElementById("latexInput").value;
+
+        // Get the output div element
+        const outputDiv = document.getElementById("output");
+
+        // Clear previous rendering
+        outputDiv.innerHTML = "";
+
+        // Render the user's input using KaTeX
+        katex.render(userInput, outputDiv, {
+            throwOnError: true // Set to true to display error messages for invalid LaTeX
+        });
+    }
+</script>
+
+</body>
